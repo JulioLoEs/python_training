@@ -1,0 +1,10 @@
+1. instalar django: pipenv install django ==  4.1.7
+2. activar ambiente virtual: pipenv shell
+3. crear proyecto: "django-admin startproject productly ." Acá es importante colocar el punto final en la terminal
+4. inciar servidor de desarrollo: python manage.py runserver
+5. iniciar aplicación: python manage.py startapp productos
+## Luego de actualizar datos en clases de modelos:
+6. hacer migrations para generar base de datos: python manage.py makemigrations. Añade los cambios.
+7. Aplicar migraciones: python manage.py migrate
+8. Crear usuarios administradores: python manage.py createsuperuser
+9. Activar ambiente virtual: pipenv shell

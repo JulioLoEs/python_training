@@ -1,0 +1,27 @@
+{% load add_attr %}
+<!--comment-->
+{% for field in form %}
+<!--comment-->
+<div class="mb-3">
+  {{ field.label_tag }}
+  <!--comment-->
+  {% if field.errors %}
+  <!--comment-->
+  {{ field|add_attr:"class:is-invalid" }}
+  <!--comment-->
+  {% else %}
+  <!--comment-->
+  {{ field }}
+  <!--comment-->
+  {% endif %}
+  <!--comment-->
+  <div class="invalid-feedback">
+    {% for error in field.errors %}
+    <!--comment-->
+    {{ error }}
+    <!--comment-->
+    {% endfor %}
+  </div>
+</div>
+<!--comment-->
+{% endfor %}
